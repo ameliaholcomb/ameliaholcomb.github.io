@@ -121,6 +121,10 @@ div.list {
   padding-bottom: 10px;
 }
 
+div.footer {
+  vertical-align: bottom;
+}
+
 header {
   width:270px;
   float:left;
