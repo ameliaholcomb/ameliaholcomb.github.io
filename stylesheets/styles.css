@@ -99,8 +99,26 @@ th {
   color:#444;
 }
 
-img {
+img#main {
   max-width:100%;
+  border-radius: 50%;
+  padding-bottom: 20px;
+}
+img.small {
+  width: 75px;
+  border-radius: 50%;
+  border:1px solid #d3d3d3;
+  vertical-align: middle;
+}
+
+div.details {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+div.list {
+  padding-bottom: 10px;
 }
 
 header {
@@ -112,7 +130,7 @@ header {
 
 header ul {
   list-style:none;
-  height:40px;
+  height:160px;
   padding:0;
   background: #f4f4f4;
   border-radius:5px;
@@ -121,9 +139,8 @@ header ul {
 }
 
 header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #e0e0e0;
+  width:270px;
+  border-bottom:1px solid #e0e0e0;
   height:40px;
 }
 
@@ -133,6 +150,7 @@ header li:first-child a {
 
 header li:last-child a {
   border-radius:0 5px 5px 0;
+  border-bottom: none;
 }
 
 header ul a {
@@ -158,9 +176,8 @@ strong {
   font-weight:700;
 }
 
-header ul li + li + li {
-  border-right:none;
-  width:89px;
+header ul li + li + li + li {
+  border-bottom:none;
 }
 
 header ul a strong {
@@ -199,6 +216,7 @@ footer {
   div.wrapper {
     width:auto;
     margin:0;
+
   }
 
   header, section, footer {
