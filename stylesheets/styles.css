@@ -2,7 +2,7 @@
 
 body {
   background-color: #fff;
-  padding:50px;
+  padding:17px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#595959;
   font-weight:400;
@@ -125,7 +125,10 @@ header {
   width:270px;
   float:left;
   position:fixed;
+  padding:20px;
+  background-color: #d3d3d3;
   -webkit-font-smoothing:subpixel-antialiased;
+  border-radius: 5px 5px 5px 5px;
 }
 
 header ul {
@@ -190,6 +193,7 @@ section {
   width:500px;
   float:right;
   padding-bottom:50px;
+  border-left:1px #000000;
 }
 
 small {
