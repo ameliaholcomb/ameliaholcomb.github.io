@@ -29,10 +29,13 @@
       </header>
       <section>
         <h2> Parallelized Sparse Matrix Multiplication </h2>
+        <p><i>with Jiaao Hou</i></p>
         <div>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <p>
+          <p> The initial inspiration for our project came from thinking about the earliest published iteration of Google’s pagerank algorithm, which computes an adapted version of eigenvector centrality for the graph of internet websites (vertices are web pages and directed edges are hyperlinks between them). Rather than computing the eigenvectors of the adapted adjacency matrix directly, which is often computationally costly, the matrix can be understood as a Markov matrix and its stable state approximated by raising the matrix to very high powers. </p>
+          <p> In this project, we took on that last step and wrote code to raise the matrix to high powers in parallel. We noted that internet graphs tend to be very sparse: two randomly chosen pages are extremely unlikely to link to one another. Thus, we decided to parallelize sparse matrix multiplication, in particular taking large powers of sparse matrices. We sought to implement a program that would perform no extra computation (eg would not expand out and multiply any zero matrix entries) and, when using OpenMPI, would not send any zero matrix entries between processes. </p>
+          <p> In best conditions (2048 x 2048 matrix, power of 32), we were able to acheive up to 5.7x speedup with 8 processes over the original serial code. The algorithm also proved highly scalable, with increased speedup as matrix size increased. </p>
 
-          <a href="https://github.com/jiggoha/pagerank_matrix_multiplication"> Check out the code on GitHub <a>
+          <a href="https://github.com/jiggoha/pagerank_matrix_multiplication" target="_blank"> Check out the code on GitHub <a>
 
         </div>
 

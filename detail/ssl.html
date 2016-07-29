@@ -29,10 +29,13 @@
       </header>
       <section>
         <h2> Secure Socket Layer Protocol </h2>
+        <p><i>with Vicky Tu and Shona Hemmady </i> </p>
+        
         <div>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <p>
+          <p> In this project, we created a modified version of Transport Layer Security, which implements the main aspects of the original cryptographic protocol outlined in <a href="https://www.ietf.org/rfc/rfc2246.txt" target="_blank">RFC 2246</a>. This project built upon our java implementation of TCP/IP (which, itself, built on <a href="http://courses.cs.washington.edu/courses/cse461/05wi/fishnet-intro.pdf" target="_blank">Fishnet</a> for the lower layer network code). </p>
+          <p> We implemented both the server and client side of a secure handshake, including sending and parsing signed certificates, computing cryptographically secure hashes and keys using HMAC-SHA1 and HMAC-MD5, and producing and verifying a signed digest at the end of the handshake. With handshake complete, persistent connections then encrypt and decrypt all future packets sent using an RC4 cipher and the key established during the handshake. At this point, by design, encrypted communication is quite lightweight for both client and server. </p>
 
-          <a href="https://github.com/vickytu/modifiedSSL"> Check out the code on GitHub <a>
+          <a href="https://github.com/vickytu/modifiedSSL" target="_blank"> Check out the code on GitHub <a>
 
         </div>
 
